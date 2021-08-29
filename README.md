@@ -6,7 +6,7 @@ Create an application that can be used to write, save, and delete notes. This ap
 
 ## Requirements
 
-- [ ] You’ll have some boilerplate HTML/CSS and store to read/write JSON file, it's your job to build the backend and connect the two. Download file [NoteTaker.zip](https://drive.google.com/file/d/19pMYYKzGX1J8Gc8nlQx7ZVZxIFYUIUBo/view?usp=sharing). Remember to run app with `node server.js` for backend functionality
+- [x] You’ll have some boilerplate HTML/CSS and store to read/write JSON file, it's your job to build the backend and connect the two. Download file [NoteTaker.zip](https://drive.google.com/file/d/19pMYYKzGX1J8Gc8nlQx7ZVZxIFYUIUBo/view?usp=sharing). Remember to run app with `node server.js` for backend functionality
 
 - [ ] The following HTML routes should be created:
 

@@ -1,15 +1,40 @@
 {
-  "name": "note-taker",
+  "name": "express-note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require test/setup.js",
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
-  "author": "",
+  "globals": {
+    "supertest": true,
+    "expect": true
+  },
+  "keywords": [],
+  "engines": {
+    "node": "10.11.0"
+  },
+  "author": "Chanda Abdul",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "uuid": "^3.4.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "knex": "^0.95.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "postgrator": "^4.1.1",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.7",
+    "supertest": "^4.0.2"
   }
 }
