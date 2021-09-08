@@ -1,21 +1,18 @@
 const express = require("express");
-const { NODE_ENV, PORT, DB_URL } = require("./config");
+const { PORT } = require("./config");
+const noteRouter = require('./routes/notes')
+const htmlRouter = require('./routes/html')
 const app = express();
-const path = require('path')
-const router = express.Router()
+
+app.use(express.json())
+app.use(noteRouter)
+app.use(htmlRouter)
+
+// app.get("/", (req, res) => {
+//   res.send("Hello, world!");
+// });
 
 
-//GET index.html
-router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-  });
-
-  //GET notes.html
-  router.get('/notes',function(req,res){
-    res.sendFile(path.join(__dirname, '..', 'public', 'notes.html'));
-  });
-
-app.use('/', router)
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
